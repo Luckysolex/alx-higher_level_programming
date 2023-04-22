@@ -1,15 +1,14 @@
 #include <stdio.h>
 #include <stdlib.h>
-#include <python.h>
+#include <Python.h>
 #include <floatobject.h>
 #include <string.h>
 
 
 /**
- * print_python_float - prints info about python float
- * @p: address of PyObject struct
- *
- */
+ * print_python_float - prints inflo about pYthon float.
+ * @p: address of PyObject struct.
+*/
 void print_python_float(PyObject *p)
 {
 	double d;
@@ -23,15 +22,15 @@ void print_python_float(PyObject *p)
 		}
 
 	d = ((PyFloatObject *)p)->ob_fval;
-	printf(" value: %s\n",
-		PyOs_double_to_string(d, 'r', 0, Py_DTSF_ADD_DOT_0, NULL));
+		printf(" value: %s\n",
+			PyOS_double_to_string(d, 'r', 0, Py_DTSF_ADD_DOT_0, NULL));
 }
 
 
 /**
- * print_python_bytes - prints info about python bytes
- * @p: address of PyObject struct
- */
+ * print_python_bytes - prints info about Python bytes.
+ * @p: address of PyObject struct.
+*/
 void print_python_bytes(PyObject *p)
 {
 	size_t i, len, size;
