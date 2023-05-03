@@ -11,7 +11,6 @@ class Square:
 
     def __init__(self, size=0, position=(0, 0)):
         """Constructor.
-
         Args:
             size(int): length of side of the square.
             position(int tuple): position of the square
@@ -26,8 +25,7 @@ class Square:
 
     @property
     def size(self):
-        """Properties for the length of a size of a square.
-
+        """Properties for the length of a sise of a square.
         Raises:
             TypeError: if size is not an integer.
             ValueError: If size < 0.
@@ -37,7 +35,7 @@ class Square:
     @size.setter
     def size(self, value):
         """setter function for private attribute size.
-            Args:
+           Args:
                 value: size value to set to.
         """
         if not (isinstance(value, int)):
@@ -49,7 +47,6 @@ class Square:
     @property
     def position(self):
         """Property for square position.
-
         Raises:
             TypeError: If value is not tuple of 2 positive integers.
         """
@@ -58,7 +55,7 @@ class Square:
     @position.setter
     def position(self, value):
         """setter function for private attribute position
-            Args:
+           Args:
                 value: position value to set to.
         """
         if isinstance(value, tuple) and len(value) == 2:
@@ -70,9 +67,8 @@ class Square:
 
     def area(self):
         """Area of the square.
-
         Returns:
-            the size squared.
+            thee size squared.
         """
         return self.__size ** 2
 
@@ -86,3 +82,4 @@ class Square:
                 print()
             for j in range(self.__size):
                 print("{}{}".format(" " * self.__position[0], "#" * self.__size))
+
