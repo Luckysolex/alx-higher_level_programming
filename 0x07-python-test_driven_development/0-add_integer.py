@@ -4,14 +4,11 @@
 
 def add_integer(a, b=98):
     """Adds 2 integers.
-
     Args:
-        a: the first integer.
-        b: second integer, default 98.
-
+        a: the first int.
+        b: second int, default 98.
     Raises:
         TypeError: if a, b are neither int nor float.
-
     Returns:
         sum of the 2 integers.
     """
