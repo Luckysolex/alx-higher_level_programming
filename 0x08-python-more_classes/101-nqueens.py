@@ -46,7 +46,7 @@ def board_column_gen(board=[]):
     return board
 
 
-def add_queen(board, row,col):
+def add_queen(board, row, col):
     """Sets "queen," or 1, to coordinates given in board.
     Args:
         board (list) of (list) of (int): 2D list of ints, only as wide as
@@ -58,7 +58,7 @@ def add_queen(board, row,col):
 
 
 def new_queen_safe(board, row, col):
-     """For the board given, checks that for a new queen placed in the rightmost
+    """For the board given, checks that for a new queen placed in the rightmost
     column, there are no other "queen"s, or 1 values, in the martix to the
     left, and diagonally up-left and down-left.
     Args:
@@ -79,13 +79,13 @@ def new_queen_safe(board, row, col):
             if (x - i) >= 0:
                 if board[x - i][y - i]:
                     return False
-                # check left
-                if board[x][y - i]:
+            # check left
+            if board[x][y - i]:
+                return False
+            # check down-left diagonal
+            if (x + i) < N:
+                if board[x + i][y - i]:
                     return False
-                # check down-left diagonal
-                if (x + i) < N:
-                    if board[x + i][y - i]:
-                        return False
     return True
 
 
@@ -119,15 +119,15 @@ candidates.append(board_column_gen())
 # proceed column by column, testing the rightmost
 for col in range(N):
     # start a new generation of the candidate list for every round of testing
-    new_candidate = []
+    new_candidates = []
     # test each candidate from previous round, at current column
     for matrix in candidates:
         # for every row in that candidate's rightmost column
         for row in range(N):
             # are there any conflicts in placing a queen at those coordinates?
             if new_queen_safe(matrix, row, col):
-                # no? then create a 'child' (copy) of that candidate
-                 temp = [line[:] for line in matrix]
+                # no? then create a "child" (copy) of that candidate
+                temp = [line[:] for line in matrix]
                 # place a queen in that position
                 add_queen(temp, row, col)
                 # and unless you're in the last round of testing,
