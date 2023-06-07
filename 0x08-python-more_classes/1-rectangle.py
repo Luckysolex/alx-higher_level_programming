@@ -1,4 +1,6 @@
 #!/usr/bin/python3
+"""1-rectangle, built on 0-rectangle.
+"""
 
 class Rectangle:
     """Rectangle class."""
