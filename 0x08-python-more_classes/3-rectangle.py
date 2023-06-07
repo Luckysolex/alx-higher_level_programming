@@ -1,9 +1,10 @@
 #!/usr/bin/python3
-"""3-rectangle, built o 2-rectangle.
+"""3-rectangle, built for Holberton Python project 0x08 task 3.
 """
 
+
 class Rectangle:
-     """Takes in args for width and height of a rectangle, and contains methods
+    """Takes in args for width and height of a rectangle, and contains methods
     for calculation of the area or perimeter.
     __str__ fuctionality defined below.
     Args:
@@ -11,13 +12,13 @@ class Rectangle:
         height (int): vertical dimension of rectangle, defaults to 0
     """
     def __init__(self, width=0, height=0):
-        # Attribute assignment here engages setters defined below.
+        # attribute assigment here engages setters defined below
         self.width = width
         self.height = height
 
     @property
     def width(self):
-         """__width getter.
+        """__width getter.
         Returns:
             __width (int): horizontal dimension of rectangle
         """
@@ -41,7 +42,7 @@ class Rectangle:
 
     @property
     def height(self):
-         """__height getter.
+        """__height getter.
         Returns:
             __height (int): vertical dimension of rectangle
         """
@@ -58,7 +59,7 @@ class Rectangle:
             ValueError: If `value` is less than 0.
         """
         if type(value) is not int:
-            raise TypeError('height mut be an integer')
+            raise TypeError('height must be an integer')
         if value < 0:
             raise ValueError('height must be >= 0')
         self.__height = value
@@ -74,7 +75,7 @@ class Rectangle:
         return self.__width * self.__height
 
     def perimeter(self):
-         """Returns the perimeter of a rectangle of given `width` and `height`
+        """Returns the perimeter of a rectangle of given `width` and `height`
         Attributes:
             __width (int): horizontal dimension of rectangle
             __height (int): vertical dimension of rectangle
@@ -106,8 +107,8 @@ class Rectangle:
                 str += '\n'
         return str
 
-    def __str__(self)):
-         """Allows direct printing of instances.
+    def __str__(self):
+        """Allows direct printing of instances.
         Returns:
             The output of _draw_rectangle, which creates a string
         representation of the rectangle suitable for printing.
