@@ -1,5 +1,6 @@
 #!/usr/bin/python3
 """Module with the function to return a JSON data."""
+import json
 
 
 def to_json_string(my_obj):
