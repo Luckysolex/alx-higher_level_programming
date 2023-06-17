@@ -36,10 +36,10 @@ class Student:
         if attrs is None:
             return self.__dict__
 
-        fresh_dict = {}
+        new_dict = {}
         for item in attrs:
             try:
-                fresh_dict[item] = self.__dict__[item]
+                new_dict[item] = self.__dict__[item]
             except Exception:
                 pass
-        return fresh_dict
+        return new_dict
