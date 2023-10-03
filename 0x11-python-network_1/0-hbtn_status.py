@@ -1,4 +1,4 @@
-i#!/usr/bin/python3
+#!/usr/bin/python3
 """This Module contain a script that
 - fetches https://alx-intranet.hbtn.io/status.
 - uses urlib package
